@@ -1,0 +1,94 @@
+{
+    "manifestVersion": 1,
+    "id": "Shared-Props-Task",
+    "name": "Shared Props Updater",
+    "public": false,
+    "version": "3.2.0",
+    "publisher": "signswift",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "Set shared properties in .msbuild or .props files.",
+    "icons": {
+        "default": "images/Logo128x128.png"
+    },
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "Assembly",
+        "Shared",
+        "Props",
+        "Version",
+        "Versioning"
+    ],
+    "screenshots": [
+        {
+            "path": "images/Task_List_Net_Core.png"
+        }
+    ],
+    "links": {
+        "learn": {
+            "uri": "https://github.com/ianmercer/vsts-assemblyinfo-task/wiki"
+        },
+        "support": { 
+            "uri": "https://github.com/ianmercer/vsts-assemblyinfo-task/issues"
+        },
+        "privacypolicy": {
+            "uri": "https://github.com/ianmercer/vsts-assemblyinfo-task/blob/master/src/Privacy.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/ianmercer/vsts-assemblyinfo-task"
+    },
+    "badges": [
+        {
+            "href": "https://github.com/ianmercer/vsts-assemblyinfo-task",
+            "uri": "https://signswift.visualstudio.com/_apis/public/build/definitions/86c93e13-9469-4df8-95f0-98c43c760a09/8/badge?branchName=master",
+            "description": "Azure DevOps Build"
+        },
+        {
+            "href": "https://github.com/ianmercer/vsts-assemblyinfo-task",
+            "uri": "https://signswift.vsrm.visualstudio.com/_apis/public/Release/badge/86c93e13-9469-4df8-95f0-98c43c760a09/1/2",
+            "description": "Azure DevOps Release"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "Overview.md"
+        },
+        "license": {
+            "path": "License.md"
+        }
+    },
+    "branding": {
+        "color": "#222730",
+        "theme": "dark"
+    },
+    "files": [
+        {
+            "path": "shared-props",
+            "addressable" : true,
+            "packagePath" : "shared-props"
+        },
+        {
+            "path": "images",
+            "addressable": true
+        }
+    ],
+    "contributions": [
+        {
+            "id": "shared-props",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "shared-props"
+            }
+        }
+    ]
+}

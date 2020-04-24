@@ -1,0 +1,22 @@
+{
+  "name": "shared-props",
+  "version": "1.0.0",
+  "description": "Shared property updater",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chardet": "^0.8.0",
+    "@types/xml2js": "^0.4.5",
+    "and": "0.0.3",
+    "azure-pipelines-task-lib": "^2.9.3",
+    "chardet": "^0.8.0",
+    "iconv-lite": "^0.5.0",
+    "install": "^0.13.0",
+    "moment": "^2.24.0",
+    "xml2js": "^0.4.22"
+  }
+}

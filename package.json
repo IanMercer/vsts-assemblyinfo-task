@@ -1,7 +1,7 @@
 {
-  "name": "vsts-assemblyinfo-task",
+  "name": "signswift-shared-props-updater",
   "version": "1.0.0",
-  "description": "Extension for Team Services that sets assembly information from a build.",
+  "description": "Extension that sets version information in shared .props or .msbuild files.",
   "scripts": {
     "build": "tsc",
     "start": "node dist/src/task/index.js",
@@ -10,33 +10,34 @@
     "gen_notice": "node generate-third-party-notice.js",
     "nuke_install": "rm -rf node_modules dist && npm cache verify && npm install",
     "nuke_install_prod": "rm -rf node_modules dist && npm cache verify && npm install --production",
-    "package-release": "tfx extension create --manifest-globs ./vss-extension.json",
-    "package-dev": "tfx extension create --manifest-globs ./vss-extension.json --share-with bleddynrichards"
+    "package-release": "tsc ./shared-props/index.ts && tfx extension create --manifests ./vss-extension.json",
+    "package-dev": "tsc ./shared-props/index.ts && tfx extension create --manifests ./vss-extension.json --share-with abodit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BMuuN/vsts-assemblyinfo-task.git"
+    "url": "git+https://github.com/IanMercer/vsts-assemblyinfo-task.git"
   },
-  "author": "Bleddyn Richards",
+  "author": "Bleddyn Richards & Ian Mercer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BMuuN/vsts-assemblyinfo-task/issues"
+    "url": "https://github.com/IanMercer/vsts-assemblyinfo-task/issues"
   },
-  "homepage": "https://github.com/BMuuN/vsts-assemblyinfo-task#readme",
+  "homepage": "https://github.com/IanMercer/vsts-assemblyinfo-task#readme",
   "dependencies": {
     "@types/chardet": "^0.8.0",
-    "@types/q": "^1.5.2",
     "@types/xml2js": "^0.4.5",
-    "applicationinsights": "^1.7.0",
+    "and": "0.0.3",
     "azure-pipelines-task-lib": "^2.9.3",
     "chardet": "^0.8.0",
     "iconv-lite": "^0.5.0",
+    "install": "^0.13.0",
     "moment": "^2.24.0",
     "xml2js": "^0.4.22"
   },
   "devDependencies": {
     "@types/mocha": "^7.0.1",
-    "@types/node": "^13.7.0",
+    "@types/node": "^13.13.2",
+    "@types/q": "^1.5.2",
     "mocha": "^7.0.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.2"

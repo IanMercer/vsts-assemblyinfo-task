@@ -259,3 +259,4 @@ paket-files/
 package-lock.json
 .taskkey
 dist/
+*.vsix
