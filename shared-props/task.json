@@ -1,14 +1,14 @@
 {
   "id": "9E9CFB95-62DC-4A63-BC66-FB8F57AF76EF",
   "name": "Shared-Props",
-  "friendlyName": "Signswift Shared Property Updater 3.2",
+  "friendlyName": "Signswift Shared Property Updater 3.4",
   "description": "Set version information in shared .props or .msbuild files",
   "helpMarkDown": "[More Information](https://marketplace.visualstudio.com/items?itemName=signswift.Assembly-Info-Shared-Props-Task)",
   "category": "Build",
   "author": "Bleddyn Richards & Ian Mercer",
   "version": {
     "Major": 3,
-    "Minor": 2,
+    "Minor": 4,
     "Patch": 0
   },
   "minimumAgentVersion": "2.115.0",

@@ -2,8 +2,6 @@ import tl = require('azure-pipelines-task-lib/task');
 import chardet = require('chardet');
 import fs = require('fs');
 import iconv = require('iconv-lite');
-import moment = require('moment');
-import path = require('path');
 import xml2js = require('xml2js');
 
 import { LoggingLevel } from './enums';
@@ -192,14 +190,6 @@ function setAssemblyData(group: any, model: models.AssemblyInfo): void {
         }
     }
 
-    // Assembly Version
-    if (model.assemblyVersion) {
-        if (group.AssemblyVersion || group.AssemblyVersion === '') {
-            logger.info(`AssemblyVersion ${group.AssemblyVersion} --> ${model.assemblyVersion}`);
-            group.AssemblyVersion = model.assemblyVersion;
-        }
-    }
-
     // Package Version
     if (model.packageVersion) {
         if (group.Version || group.Version === '') {
@@ -208,18 +198,29 @@ function setAssemblyData(group: any, model: models.AssemblyInfo): void {
         }
     }
 
+    // NB There is also a VersionPrefix and a VersionSuffix but since we are running in Azure DevOps
+    // where it's easy to concatenate variables there seems to be no point doing that here.
+
+    // Assembly Version
+    if (model.assemblyVersion) {
+        if (group.AssemblyVersion || group.AssemblyVersion === '') {
+            logger.info(`AssemblyVersion ${group.AssemblyVersion} --> ${model.assemblyVersion}`);
+            group.AssemblyVersion = model.assemblyVersion;
+        }
+    }
+
     // File Version
     if (model.assemblyFileVersion) {
-        if (group.AssemblyFileVersion || group.AssemblyFileVersion === '') {
-            logger.info(`AssemblyFileVersion ${group.AssemblyFileVersion} --> ${model.assemblyFileVersion}`);
-            group.AssemblyFileVersion = model.assemblyFileVersion;
+        if (group.FileVersion || group.FileVersion === '') {
+            logger.info(`FileVersion ${group.AssemblyFileVersion} --> ${model.assemblyFileVersion}`);
+            group.FileVersion = model.assemblyFileVersion;
         }
     }
 
     // Informational Version
     if (model.assemblyInformationalVersion) {
         if (group.InformationalVersion || group.InformationalVersion === '') {
-            logger.info(`AssemblyInformationalVersion ${group.InformationalVersion} --> ${model.assemblyInformationalVersion}`);
+            logger.info(`InformationalVersion ${group.InformationalVersion} --> ${model.assemblyInformationalVersion}`);
             group.InformationalVersion = model.assemblyInformationalVersion;
         }
     }
