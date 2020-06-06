@@ -3,7 +3,7 @@
     "id": "Shared-Props-Task",
     "name": "Shared Props Updater",
     "public": false,
-    "version": "3.5.0",
+    "version": "3.12.0",
     "publisher": "signswift",
     "targets": [
         {

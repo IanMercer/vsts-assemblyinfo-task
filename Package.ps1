@@ -1,4 +1,6 @@
 Remove-Item *.vsix
 
-$assemblyInfoExtension = (Get-Item -Path ".\" -Verbose).FullName + "\src" 
+npm run build
+
+$assemblyInfoExtension = (Get-Item -Path ".\" -Verbose).FullName
 tfx extension create --manifest-globs vss-extension.json --root $assemblyInfoExtension

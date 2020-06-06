@@ -1,14 +1,14 @@
 {
   "id": "9E9CFB95-62DC-4A63-BC66-FB8F57AF76EF",
   "name": "Shared-Props",
-  "friendlyName": "Signswift Shared Property Updater 3.5",
+  "friendlyName": "Signswift Shared Property Updater 3.12",
   "description": "Set version information in shared .props or .msbuild files",
   "helpMarkDown": "[More Information](https://marketplace.visualstudio.com/items?itemName=signswift.Assembly-Info-Shared-Props-Task)",
   "category": "Build",
   "author": "Bleddyn Richards & Ian Mercer",
   "version": {
     "Major": 3,
-    "Minor": 5,
+    "Minor": 12,
     "Patch": 0
   },
   "minimumAgentVersion": "2.115.0",
@@ -45,7 +45,7 @@
       "name": "FileNames",
       "type": "multiLine",
       "label": "Source files",
-      "defaultValue": "**/shared.props\r\n**/shared.msbuild",
+      "defaultValue": "**/shared.props\r\n**/shared.msbuild\r\n**/Directory.Build.props",
       "required": true,
       "helpMarkDown": "Specify the project or custom property file(s). Wildcards can be used.  For example, `**/*.csproj` for all csproj files in all the sub folders.\r\n[More Information](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/file-matching-patterns?view=vsts)",
       "properties": {

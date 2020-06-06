@@ -14,8 +14,6 @@ let logger: Logger = new Logger(false, LoggingLevel.Normal);
 async function run() {
 
     try {
-        const regExModel = new models.RegEx();
-
         const model = getDefaultModel();
         model.fileNames = utils.formatFileNames(model.fileNames);
 
@@ -27,9 +25,8 @@ async function run() {
             return;
         }
 
-        applyTransforms(model, regExModel);
         printTaskParameters(model);
-        setManifestData(model, regExModel);
+        setManifestData(model);
 
         // set output variables
         tl.setVariable('AssemblyInfo.Version', model.packageVersion, false);
@@ -37,26 +34,11 @@ async function run() {
         tl.setVariable('AssemblyInfo.FileVersion', model.assemblyFileVersion, false);
         tl.setVariable('AssemblyInfo.InformationalVersion', model.assemblyInformationalVersion, false);
 
-        logger.success('Complete.');
+        logger.success('Complete');
 
     } catch (err) {
         logger.error(`Task failed with error: ${err.message}`);
     }
-}
-
-function applyTransforms(model: models.AssemblyInfo, regex: models.RegEx): void {
-    Object.keys(model).forEach((key: string) => {
-        if (model.hasOwnProperty(key)) {
-            const value = Reflect.get(model, key);
-            if (typeof value === 'string' && value !== '') {
-                const newValue = utils.transformDates(value, regex);
-                if (value !== newValue) {
-                    Reflect.set(model, key, newValue);
-                    // logger.debug(`Key: ${key},  Value: ${value},  New Value: ${newValue}`);
-                }
-            }
-          }
-    });
 }
 
 function getDefaultModel(): models.AssemblyInfo {
@@ -103,7 +85,7 @@ function printTaskParameters(model: models.AssemblyInfo): void {
     logger.debug('');
 }
 
-function setManifestData(model: models.AssemblyInfo, regEx: models.RegEx): void {
+function setManifestData(model: models.AssemblyInfo): void {
 
     logger.info('Setting shared msbuild or props ...');
     logger.info('');

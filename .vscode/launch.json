@@ -7,21 +7,10 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Net Framework",
+            "name": "Launch Shared Props Updater",
             "protocol": "inspector",
             "envFile": "${workspaceFolder}/config/prod.env",
-            "args": [ "./src/netframework/index.ts" ],
-            "cwd": "${workspaceRoot}",
-            "runtimeArgs": [ "-r", "ts-node/register" ],
-            "internalConsoleOptions": "openOnSessionStart"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Net Core",
-            "protocol": "inspector",
-            "envFile": "${workspaceFolder}/config/prod.env",
-            "args": [ "./src/netcore/index.ts" ],
+            "args": [ "./shared-props/index.ts" ],
             "cwd": "${workspaceRoot}",
             "runtimeArgs": [ "-r", "ts-node/register" ],
             "internalConsoleOptions": "openOnSessionStart"

@@ -36,7 +36,6 @@ This Visual Studio Team Services extension (vsts-task-lib) is based on or incorp
 30.	mkdirp (git+https://github.com/substack/node-mkdirp.git)
 31.	mocha (git+https://github.com/mochajs/mocha.git)
 32.	mockery (git://github.com/mfncooper/mockery.git)
-33.	moment (git+https://github.com/moment/moment.git)
 34.	ms (git+https://github.com/zeit/ms.git)
 35.	once (git://github.com/isaacs/once.git)
 36.	path-is-absolute (git+https://github.com/sindresorhus/path-is-absolute.git)
@@ -804,33 +803,6 @@ Copyrights for code authored by Yahoo! Inc. is licensed under the following
  DEALINGS IN THE SOFTWARE.
 =========================================
 END OF mockery NOTICES, INFORMATION, AND LICENSE
-
-%% moment NOTICES, INFORMATION, AND LICENSE BEGIN HERE
-=========================================
-Copyright (c) JS Foundation and other contributors
-
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following
-conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-=========================================
-END OF moment NOTICES, INFORMATION, AND LICENSE
 
 %% ms NOTICES, INFORMATION, AND LICENSE BEGIN HERE
 =========================================

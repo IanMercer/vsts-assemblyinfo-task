@@ -1,12 +1,5 @@
-import moment = require('moment');
 import { LoggingLevel } from '../enums';
 import * as sharedModels from '../models';
-
-export function transformDates(value: string, regExModel: sharedModels.RegEx): string {
-    return value.replace(regExModel.date, (match: string, g1: any, g2: any): string => {
-        return moment().format(g1);
-    });
-}
 
 export function setWildcardVersionNumber(value: string, verBuild: string, verRelease: string) {
 
